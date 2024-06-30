@@ -11,6 +11,12 @@ elif [ "$1" == "--logs" ]; then
       echo -e "Numer pliku: $i, stworzony przez: $0, data: $(date)" > log_$i.txt
     done
   fi
+elif [ "$1" == "--help" ]; then
+  echo "Usage: $0 [option]"
+  echo "Options:"
+  echo "  --date         Current date"
+  echo "  --logs [num]   Create [num] log files, default 100"
+  echo "  --help         This help message"
 else
   echo "Unknown option: $1"
 fi
